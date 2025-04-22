@@ -587,48 +587,6 @@ public function __get(string $name)
 
 <hr>
 
-## Function Name: subtract
-
-**Description:** This function is used to subtract two numbers
-
-**Function Details:**
-
-@param int|float $a first number
-
-@param int|float $b second number
-
-@return int|float the result of the subtraction
-
-
-```php
-function subtract($a, $b) {
-        return $a - $b;
-    }
-```
-
-<hr>
-
-## Function Name: multiply
-
-**Description:** This function is used to multiply two numbers
-
-**Function Details:**
-
-@param int|float $a first number
-
-@param int|float $b second number
-
-@return int|float the result of the multiplication
-
-
-```php
-function multiply($a, $b) {
-        return $a * $b;
-    }
-```
-
-<hr>
-
 ## Function Name: __construct
 
 **Description:** public array $listDocuments; public readonly int $count; /** @var bool if false, the value is just an approximation*/ public readonly bool $isCountExact; public readonly int $page; public readonly int $pageSize; public readonly int $pageCount; public readonly array $debug; public readonly ?array $warning; /** @var int time it took in ms  */ public readonly int $took; /** @var bool partial content if true ? */ public readonly bool $timedOut; public readonly array $aggregations; / initialization of the collection

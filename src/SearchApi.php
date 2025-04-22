@@ -206,7 +206,7 @@ class SearchApi
                 throw new UnknownException(sprintf('Search return an http error : %s', $response->getStatusCode()));
         }
     }
-    
+
     /**
      * @return array
      */
@@ -218,5 +218,4 @@ class SearchApi
             ]
         ];
     }
-
 }
