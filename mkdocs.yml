@@ -1,0 +1,9 @@
+site_name: OpenFoodFacts PHP Documentation
+theme:
+  name: material
+docs_dir: doc
+nav:
+  - Home: index.md
+  - Features: features.md
+plugins:
+  - search
