@@ -3,8 +3,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - cr03  # Trigger workflow on pushes to the cr03 branch
-
+      - develop  
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
