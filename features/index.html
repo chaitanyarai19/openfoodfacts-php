@@ -1,0 +1,1304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Features - OpenFoodFacts PHP Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OpenFoodFacts PHP Documentation" class="md-header__button md-logo" aria-label="OpenFoodFacts PHP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenFoodFacts PHP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OpenFoodFacts PHP Documentation" class="md-nav__button md-logo" aria-label="OpenFoodFacts PHP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpenFoodFacts PHP Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__isset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __isset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-activetestmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: activeTestMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getProduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getbyfacets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getByFacets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-addnewproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: addNewProduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-uploadimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: uploadImage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-downloaddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: downloadData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-fetchpost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: fetchPost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-buildurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: buildUrl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdefaultoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDefaultOptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdocument" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDocument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-search_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-autocomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: autocomplete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdefaultoptions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDefaultOptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-isassoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: isAssoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__isset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __isset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-activetestmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: activeTestMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getProduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getbyfacets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getByFacets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-addnewproduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: addNewProduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-uploadimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: uploadImage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-downloaddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: downloadData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-fetchpost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: fetchPost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-buildurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: buildUrl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdefaultoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDefaultOptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdocument" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDocument
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-search_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-autocomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: autocomplete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-getdefaultoptions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: getDefaultOptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: add
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-isassoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: isAssoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-name-__construct_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Name: __construct
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="features">Features</h1>
+<h2 id="function-name-__construct">Function Name: __construct</h2>
+<p><strong>Description:</strong> In mongoDB all element are object, it not possible to define property.All property of the mongodb entity are store in one property of this class and the magic call try to access to it@property string $code@property string $product_name/ class Document { use RecursiveSortingTrait;  /the whole data/ private array $data;  /Initialization the document and specify from which API it was extract@param array $data the whole data</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __construct(array $data)
+    {
+        $this-&gt;recursiveSortArray($data);
+        $this-&gt;data = $data;
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__get">Function Name: __get</h2>
+<p><strong>Description:</strong> </p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __get(string $name)
+    {
+        return $this-&gt;data[$name];
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__isset">Function Name: __isset</h2>
+<p><strong>Description:</strong> </p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __isset(string $name): bool
+    {
+        return isset($this-&gt;data[$name]);
+    }
+
+    /**
+     * Returns a sorted representation of the complete Document Data
+     * @return array
+     */
+    public function getData(): array
+    {
+        return $this-&gt;data;
+    }
+
+    /**
+     * Returns a Document in the type regarding to the API used.
+     * May be a Child of &quot;Document&quot; e.g.: FoodDocument or ProductDocument
+     * @param string $apiIdentifier
+     * @param array  $data
+     * @return Document
+     */
+    public static function createSpecificDocument(string $apiIdentifier, array $data): Document
+    {
+        if ($apiIdentifier === '') {
+            return new Document($data);
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__construct_1">Function Name: __construct</h2>
+<p><strong>Description:</strong> namespace OpenFoodFacts;  use GuzzleHttp\Client; use GuzzleHttp\ClientInterface; use GuzzleHttp\Exception\GuzzleException; use GuzzleHttp\TransferStats; use OpenFoodFacts\Exception\BadRequestException; use OpenFoodFacts\Exception\ProductNotFoundException; use Psr\Log\LoggerInterface; use Psr\Log\NullLogger; use Psr\SimpleCache\CacheInterface; use Psr\SimpleCache\InvalidArgumentException;  /this class provide [...]It a fork of the python OpenFoodFact rewrite on PHP 7.2@method getIngredients() Collection@method getPurchase_places() Collection@method getPackaging_codes() Collection@method getEntry_dates() Collection/ class Api { /the httpClient for all http request/ private ClientInterface $httpClient;  /this property store the current base of the url/ private string $geoUrl     = 'https://%s.openfoodfacts.org';   /This property store the current location for http callThis property could be world for all product or you can specify le country code (cc) andlanguage of the interface (lc). If you want filter on french product you can set fr as country code.We strongly recommend to use english as language of the interface@example fr-en@link https://en.wiki.openfoodfacts.org/API/Read#Country_code_.28cc.29_and_Language_of_the_interface_.28lc.29@var string/ public string $geography  = 'world';  /this property store the auth parameter (username and password)/ private ?array $auth       = null;  /this property help you to log information/ private LoggerInterface $logger;  private ?CacheInterface $cache;  /this constant defines the environments usable by the API/ private const LIST_API = [ 'food'    =&gt; 'https://%s.openfoodfacts.org', 'beauty'  =&gt; 'https://%s.openbeautyfacts.org', 'pet'     =&gt; 'https://%s.openpetfoodfacts.org', 'product' =&gt; 'https://%s.openproductsfacts.org', ];  /This constant defines the facets usable by the APIThis variable is used to create the magic functions like "getIngredients" or "getBrands"/ private const FACETS = [ 'additives', 'allergens', 'brands', 'categories', 'countries', 'contributors', 'code', 'entry_dates', 'ingredients', 'label', 'languages', 'nutrition_grade', 'packaging', 'packaging_codes', 'purchase_places', 'photographer', 'informer', 'states', 'stores', 'traces', ];  /This constant defines the extensions authorized for the downloading of the data@var array/ private const FILE_TYPE_MAP = [ 'mongodb'   =&gt; 'openfoodfacts-mongodbdump.tar.gz', 'csv'       =&gt; 'en.openfoodfacts.org.products.csv', 'rdf'       =&gt; 'en.openfoodfacts.org.products.rdf' ];  /the constructor of the function@param string $currentAPI the environment to search@param string $geography this parameter represent the the country  code and the interface of the language@param LoggerInterface $logger this parameter define an logger@param ClientInterface|null $clientInterface@param CacheInterface|null $cacheInterface</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __construct(
+        public readonly string $userAgent,
+        private readonly string $currentAPI = 'food',
+        string $geography = 'world',
+        ?LoggerInterface $logger = null,
+        ?ClientInterface $clientInterface = null,
+        ?CacheInterface $cacheInterface = null
+    ) {
+        $this-&gt;cache        = $cacheInterface;
+        $this-&gt;logger       = $logger ?? new NullLogger();
+        $this-&gt;httpClient   = $clientInterface ?? new Client();
+
+        $this-&gt;geoUrl     = sprintf(self::LIST_API[$currentAPI], $geography);
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-activetestmode">Function Name: activeTestMode</h2>
+<p><strong>Description:</strong> This function allows you to perform testsThe domain is correct and for testing purposes only</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function activeTestMode(): void
+    {
+        $this-&gt;geoUrl = 'https://world.openfoodfacts.net';
+        $this-&gt;authentification('off', 'off');
+    }
+
+    public function getCurrentApi(): string
+    {
+        return $this-&gt;currentAPI;
+    }
+
+    /**
+     * This function store the authentication parameter
+     * @param  string $username
+     * @param  string $password
+     */
+    public function authentification(string $username, string $password): void
+    {
+        $this-&gt;auth = [
+            'user_id'   =&gt; $username,
+            'password'  =&gt; $password
+        ];
+    }
+
+    /**
+     * It's a magic function, it works only for facets
+     * @param string $name The name of the function
+     * @param void $arguments not use yet (probably needed for ingredients)
+     * @return Collection        The list of all documents found
+     * @throws InvalidArgumentException
+     * @throws BadRequestException
+     * @example getIngredients()
+     */
+    public function __call(string $name, $arguments): Collection
+    {
+        //TODO : test with argument for ingredient
+        if (strpos($name, 'get') === 0) {
+            $facet = strtolower(substr($name, 3));
+            //TODO: what about PSR-12, e.g.: getNutritionGrade() ?
+
+            if (!in_array($facet, self::FACETS)) {
+                throw new BadRequestException('Facet &quot;' . $facet . '&quot; not found');
+            }
+</code></pre>
+<hr>
+
+<h2 id="function-name-getproduct">Function Name: getProduct</h2>
+<p><strong>Description:</strong> this function search an Document by barcode@param string $barcode the barcode [\d]{13}@return Document         A Document if found@throws InvalidArgumentException@throws ProductNotFoundException@throws BadRequestException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function getProduct(string $barcode): Document
+    {
+        $url = $this-&gt;buildUrl('api', 'product', $barcode);
+
+        $rawResult = $this-&gt;fetch($url);
+        if ($rawResult['status'] === 0) {
+            //TODO: maybe return null here? (just throw an exception if something really went wrong?
+            throw new ProductNotFoundException('Product not found', 1);
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-getbyfacets">Function Name: getByFacets</h2>
+<p><strong>Description:</strong> This function return a Collection of Document search by facets@param array $query list of facets with value@param integer $page Number of the page@return Collection     The list of all documents found@throws InvalidArgumentException@throws BadRequestException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function getByFacets(array $query = [], int $page = 1): Collection
+    {
+        if (empty($query)) {
+            return new Collection();
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-addnewproduct">Function Name: addNewProduct</h2>
+<p><strong>Description:</strong> this function help you to add a new product (or update ??)@param array $postData The post data@return bool|string bool if the product has been added or the error message@throws BadRequestException@throws InvalidArgumentException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function addNewProduct(array $postData)
+    {
+        if (!isset($postData['code']) || !isset($postData['product_name'])) {
+            throw new BadRequestException('code or product_name not found!');
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-uploadimage">Function Name: uploadImage</h2>
+<p><strong>Description:</strong> [uploadImage description]@param string $code the barcode of the product@param string $imageField th name of the image@param string $imagePath the path of the image@return array             the http post response (cast in array)@throws BadRequestException@throws InvalidArgumentException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function uploadImage(string $code, string $imageField, string $imagePath)
+    {
+        //TODO : need test
+        if ($this-&gt;currentAPI !== 'food') {
+            throw new BadRequestException('not Available yet');
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-search">Function Name: search</h2>
+<p><strong>Description:</strong> A search function@param string $search a search term (fulltext)@param integer $page Number of the page@param integer $pageSize The page size@param string $sortBy the sort@return Collection        The list of all documents found@throws BadRequestException@throws InvalidArgumentException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function search(string $search, int $page = 1, int $pageSize = 20, string $sortBy = 'unique_scans')
+    {
+        $parameters = [
+            'search_terms'  =&gt; $search,
+            'page'          =&gt; $page,
+            'page_size'     =&gt; $pageSize,
+            'sort_by'       =&gt; $sortBy,
+            'json'          =&gt; '1',
+        ];
+
+        $url = $this-&gt;buildUrl('cgi', 'search.pl', $parameters);
+        $result = $this-&gt;fetch($url, false);
+
+        return new Collection($result, $this-&gt;currentAPI);
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-downloaddata">Function Name: downloadData</h2>
+<p><strong>Description:</strong> This function download all data from OpenFoodFact@param string $filePath the location where you want to put the stream@param string $fileType mongodb/csv/rdf@return bool             return true when download is complete@throws BadRequestException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function downloadData(string $filePath, string $fileType = 'mongodb')
+    {
+        if (!isset(self::FILE_TYPE_MAP[$fileType])) {
+            $this-&gt;logger-&gt;warning(
+                'OpenFoodFact - fetch - failed - File type not recognized!',
+                ['fileType' =&gt; $fileType, 'availableTypes' =&gt; self::FILE_TYPE_MAP]
+            );
+
+            throw new BadRequestException('File type not recognized!');
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-fetch">Function Name: fetch</h2>
+<p><strong>Description:</strong> This private function do a http request@param string $url the url to fetch@param boolean $isJsonFile the request must be finish by '.json' ?@return array               return the result of the request in array format@throws InvalidArgumentException@throws BadRequestException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function fetch(string $url, bool $isJsonFile = true): array
+    {
+        $url        .= ($isJsonFile ? '.json' : '');
+        $realUrl    = $url;
+        $cacheKey   = hash('sha256', $realUrl);
+
+        if (!empty($this-&gt;cache) &amp;&amp; $this-&gt;cache-&gt;has($cacheKey)) {
+            /** @var array $cachedResult */
+            $cachedResult = $this-&gt;cache-&gt;get($cacheKey);
+
+            return $cachedResult;
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-fetchpost">Function Name: fetchPost</h2>
+<p><strong>Description:</strong> $cachedResult = $this-&gt;cache-&gt;get($cacheKey);  return $cachedResult; } $data = $this-&gt;getDefaultOptions();  $data['on_stats'] = function (TransferStats $stats) use (&amp;$realUrl) { // this function help to find redirection // On redirect we lost some parameters like page $realUrl = (string)$stats-&gt;getEffectiveUri(); };  try { $response = $this-&gt;httpClient-&gt;request('get', $url, $data); } catch (GuzzleException $guzzleException) { $this-&gt;logger-&gt;warning(sprintf('OpenFoodFact - fetch - failed - GET : %s', $url), ['exception' =&gt; $guzzleException]); //TODO: What to do on a error? - return empty array? $exception = new BadRequestException($guzzleException-&gt;getMessage(), $guzzleException-&gt;getCode(), $guzzleException);  throw $exception; } if ($realUrl !== $url) { $this-&gt;logger-&gt;warning('OpenFoodFact - The url : '. $url . ' has been redirect to ' . $realUrl); } $this-&gt;logger-&gt;info('OpenFoodFact - fetch - GET : ' . $url . ' - ' . $response-&gt;getStatusCode());  /@var array $jsonResult/ $jsonResult = json_decode($response-&gt;getBody(), true);  if (!empty($this-&gt;cache) &amp;&amp; !empty($jsonResult)) { $this-&gt;cache-&gt;set($cacheKey, $jsonResult); }  return $jsonResult; }  /This function performs the same job of the "fetch" function except the call method and parameters@param string $url The url to fetch@param array $postData The post data@param boolean $isMultipart The data is multipart ?@return array               return the result of the request in array format@throws InvalidArgumentException@throws BadRequestException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function fetchPost(string $url, array $postData, bool $isMultipart = false): array
+    {
+        $data = $this-&gt;getDefaultOptions();
+
+        if ($isMultipart) {
+            foreach ($postData as $key =&gt; $value) {
+                $data['multipart'][] = [
+                    'name'      =&gt; $key,
+                    'contents'  =&gt; $value
+                ];
+            }
+</code></pre>
+<hr>
+
+<h2 id="function-name-buildurl">Function Name: buildUrl</h2>
+<p><strong>Description:</strong> This private function generates an url according to the parameters@param  string|null $service@param  string|array|null $resourceType@param  int|string|array|null $parameters@return string               the generated url</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function buildUrl(string $service = null, $resourceType = null, $parameters = null): string
+    {
+        $baseUrl = null;
+        switch ($service) {
+            case 'api':
+                /** @phpstan-ignore-next-line */
+                $baseUrl = implode('/', [
+                    $this-&gt;geoUrl,
+                    $service ?? '',
+                    'v0',
+                    $resourceType,
+                    $parameters
+                ]);
+
+                break;
+            case 'data':
+                /** @phpstan-ignore-next-line */
+                $baseUrl = implode('/', [
+                    $this-&gt;geoUrl,
+                    $service,
+                    $resourceType
+                ]);
+
+                break;
+            case 'cgi':
+                /** @phpstan-ignore-next-line */
+                $baseUrl = implode('/', [
+                    $this-&gt;geoUrl,
+                    $service,
+                    $resourceType
+                ]);
+                $baseUrl .= '?' . (is_array($parameters) ? http_build_query($parameters) : $parameters);
+
+                break;
+            case null:
+            default:
+                if (is_array($resourceType)) {
+                    $resourceType = implode('/', $resourceType);
+                }
+</code></pre>
+<hr>
+
+<h2 id="function-name-getdefaultoptions">Function Name: getDefaultOptions</h2>
+<p><strong>Description:</strong> $baseUrl = implode('/', [ $this-&gt;geoUrl, $service ?? '', 'v0', $resourceType, $parameters ]);  break; case 'data': /@phpstan-ignore-next-line/ $baseUrl = implode('/', [ $this-&gt;geoUrl, $service, $resourceType ]);  break; case 'cgi': /@phpstan-ignore-next-line/ $baseUrl = implode('/', [ $this-&gt;geoUrl, $service, $resourceType ]); $baseUrl .= '?' . (is_array($parameters) ? http_build_query($parameters) : $parameters);  break; case null: default: if (is_array($resourceType)) { $resourceType = implode('/', $resourceType); } if ($resourceType == 'ingredients') { //need test $resourceType = implode('/', ['state',  'ingredients-completed']); $parameters   = 1; } $baseUrl = implode('/', array_filter([ $this-&gt;geoUrl, $resourceType, is_array($parameters) ? '' : $parameters ], function ($value) { return !empty($value); }));  break; }  return $baseUrl; }  /@return array</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function getDefaultOptions(): array
+    {
+        $data = [
+            'headers' =&gt; $this-&gt;getDefaultHeaders(),
+        ];
+        if ($this-&gt;auth) {
+            $data['auth'] = array_values($this-&gt;auth);
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__construct_2">Function Name: __construct</h2>
+<p><strong>Description:</strong> the constructor of the function@param string $userAgent this parameter define an user agent@param LoggerInterface $logger this parameter define an logger@param ClientInterface $httpClient@param CacheInterface|null $cacheInterface</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __construct(
+        public readonly string $userAgent,
+        public readonly LoggerInterface $logger = new NullLogger(),
+        public readonly ClientInterface $httpClient = new Client(),
+        ?CacheInterface $cacheInterface = null
+    ) {
+        $this-&gt;cache        = $cacheInterface;
+
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-getdocument">Function Name: getDocument</h2>
+<p><strong>Description:</strong> Function to find a document by him identifier@param string $identifier@param string|null $indexId Index ID to use for the search, if not provided, the default index is used. If there is only one index, this parameter is not needed.@return SearchDocument A Document if found@throws InvalidArgumentException@throws ProductNotFoundException@throws UnknownException@throws ValidationException@throws GuzzleException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function getDocument(string $identifier, string $indexId = null): SearchDocument
+    {
+        $params = isset($indexId) ? ['index_id' =&gt; $indexId] : [];
+
+        $url = &quot;https://search.openfoodfacts.org/document/$identifier?&quot; . http_build_query($params);
+
+        $cacheKey   = hash('sha256', $url);
+        if (!empty($this-&gt;cache) &amp;&amp; $this-&gt;cache-&gt;has($cacheKey)) {
+            return $this-&gt;cache-&gt;get($cacheKey);
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-search_1">Function Name: search</h2>
+<p><strong>Description:</strong> Function to search a list of products@param string|null $query The search query, it supports Lucene search query syntax (https://lucene.apache.org/core/3_6_0/queryparsersyntax.html). Words that are not recognized by the lucene query parser are searched as full text search.Example: categories_tags:"en:beverages" strawberry brands:"casino" query use a filter clause for categories and brands and look for "strawberry" in multiple fields.The query is optional, but sort_by value must then be provided.@param string[] $langs list of languages we want to support during search. This list should include the user expected language, and additional languages (such as english for example).This is currently used for language-specific subfields to choose in which subfields we're searching in.If not provided, ['en'] is used.@param int|null $pageSize Number of results to return per page.@param int|null $page Page to request, starts at 1.@param string[] $fields Fields to include in the response. All other fields will be ignored.@param string|null $sortBy Field name to use to sort results, the field should exist and be sortable. If it is not provided, results are sorted by descending relevance score.@param string|null $indexId Index ID to use for the search, if not provided, the default index is used. If there is only one index, this parameter is not needed.@return SearchResult@throws InvalidParameterException@throws NotFoundException@throws UnknownException@throws ValidationException@throws GuzzleException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function search(string $query = null, array $langs = null, int $pageSize = null, int $page = null, array $fields = null, string $sortBy = null, string $indexId = null): SearchResult
+    {
+        if(empty($query) &amp;&amp; empty($sortBy)) {
+            throw new InvalidParameterException('query or sortBy must be provided');
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-autocomplete">Function Name: autocomplete</h2>
+<p><strong>Description:</strong> $parameters = []; if(isset($query)) { $parameters['q'] = $query; } if(isset($langs)) { $parameters['langs'] = implode(',', $langs); } if(isset($pageSize)) { $parameters['page_size'] = $pageSize; } if(isset($page)) { $parameters['page'] = $page; } if(isset($fields)) { $parameters['fields'] = implode(',', $fields); } if(isset($sortBy)) { $parameters['sort_by'] = $sortBy; } if(isset($indexId)) { $parameters['index_id'] = $indexId; }  $url = sprintf('https://search.openfoodfacts.org/search?%s', http_build_query($parameters)); $content = $this-&gt;request('get', $url);  return new SearchResult($content); }   /Autocomplete function to search for a term in a taxonomy@param string $query User autocomplete query.@param string[] $taxonomyNames Name(s) of the taxonomy to search in.@param string|null $lang Language to search in, default to en.@param int|null $size Number of results to return.@param int|null $fuzziness Fuzziness level to use, default to no fuzziness.@param string|null $indexId Index ID to use for the search, if not provided, the default index is used. If there is only one index, this parameter is not needed.@return AutocompleteResult@throws InvalidParameterException@throws NotFoundException@throws UnknownException@throws ValidationException@throws GuzzleException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function autocomplete(string $query, array $taxonomyNames, string $lang = null, int $size = null, int $fuzziness = null, string $indexId = null): AutocompleteResult
+    {
+        if(empty($query) || empty($taxonomyNames)) {
+            throw new InvalidParameterException('query ans taxonomyNames must be provided');
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-request">Function Name: request</h2>
+<p><strong>Description:</strong> $parameters = [ 'q' =&gt; $query, 'taxonomy_names' =&gt; implode(',', $taxonomyNames), ]; if(isset($lang)) { $parameters['lang'] = $lang; } if(isset($size)) { $parameters['size'] = $size; } if(isset($fuzziness)) { $parameters['fuzziness'] = $fuzziness; } if(isset($indexId)) { $parameters['index_id'] = $indexId; }  $url = sprintf('https://search.openfoodfacts.org/autocomplete?%s', http_build_query($parameters));  return new AutocompleteResult($this-&gt;request('get', $url)); }   /@throws ValidationException@throws NotFoundException@throws UnknownException@throws GuzzleException</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function request(string $method, string $url): array
+    {
+        $response = $this-&gt;httpClient-&gt;request($method, $url, $this-&gt;getDefaultOptions());
+        $content = json_decode($response-&gt;getBody()-&gt;getContents(), true);
+
+        switch ($response-&gt;getStatusCode()) {
+            case 200:
+                return $content;
+            case 404:
+                throw new NotFoundException();
+            case 422:
+                $this-&gt;logger-&gt;error('Validation error', ['http_content' =&gt; $content]);
+
+                throw new ValidationException();
+            default:
+                $this-&gt;logger-&gt;error('We encounter an unknown http error', ['url' =&gt; $url,'http_content' =&gt; $content]);
+
+                throw new UnknownException(sprintf('Search return an http error : %s', $response-&gt;getStatusCode()));
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-getdefaultoptions_1">Function Name: getDefaultOptions</h2>
+<p><strong>Description:</strong> </p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function getDefaultOptions(): array
+    {
+        return [
+            'headers' =&gt; [
+                'User-Agent' =&gt; 'SDK PHP - ' . $this-&gt;userAgent,
+            ]
+        ];
+    }
+
+    /**
+     * Multiply two numbers
+     *
+     * @param int|float $a first number
+     * @param int|float $b second number
+     * @return int|float the result of the multiplication
+     */
+    function multiply($a, $b) {
+        return $a * $b;
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-add">Function Name: add</h2>
+<p><strong>Description:</strong> Add two numbers@param int|float $a first number@param int|float $b second number@return int|float the result of the addition</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">function add($a, $b) {
+        return $a + $b;
+    }
+</code></pre>
+<hr>
+
+<h2 id="function-name-isassoc">Function Name: isAssoc</h2>
+<p><strong>Description:</strong> Trait RecursiveSortingTrait/ trait RecursiveSortingTrait { /@param array $arr@return bool</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">private function isAssoc(array $arr): bool
+    {
+        return array_keys($arr) !== range(0, count($arr) - 1);
+    }
+
+    /**
+     * Sorts referenced array of arrays in a recursive way for better understandability
+     * @param array $arr
+     * @see ksort
+     * @see asort
+     */
+    public function recursiveSortArray(array &amp;$arr): void
+    {
+        if ($this-&gt;isAssoc($arr)) {
+            ksort($arr);
+        }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__construct_3">Function Name: __construct</h2>
+<p><strong>Description:</strong> class Collection implements \Iterator { public const defaultPageSize = 24;  /@var array<int, Document>/ private array $listDocuments  = []; private int $count          = 0; private int$page           = 0; private int$skip           = 0; private int $pageSize       = 0;  /initialization of the collection@param array|null $data the raw data@param string|null $api  this information help to type the collection  (not use yet)</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __construct(?array $data = null, ?string $api = null)
+    {
+        $data = $data ?? [
+            'products'  =&gt; [],
+            'count'     =&gt; 0,
+            'page'      =&gt; 0,
+            'skip'      =&gt; 0,
+            'page_size' =&gt; 0,
+        ];
+        $this-&gt;listDocuments = [];
+
+        if (!empty($data['products'])) {
+            $currentApi = '';
+            if (null !== $api) {
+                $currentApi = $api;
+            }
+</code></pre>
+<hr>
+
+<h2 id="function-name-__construct_4">Function Name: __construct</h2>
+<p><strong>Description:</strong> public array $listDocuments;  public readonly int $count; /@var bool if false, the value is just an approximation/ public readonly bool $isCountExact; public readonly int $page; public readonly int $pageSize; public readonly int $pageCount; public readonly array $debug; public readonly ?array $warning; /@var int time it took in ms/ public readonly int $took; /@var bool partial content if true ?/ public readonly bool $timedOut; public readonly array $aggregations;  /initialization of the collection@param array $content the raw data</p>
+<p><strong>Function Details:</strong></p>
+<pre><code class="language-php">public function __construct(array $content)
+    {
+        $this-&gt;count = $content['count'] ?? 0;
+        $this-&gt;isCountExact = $content['is_count_exact'] ?? false;
+        $this-&gt;page = $content['page'] ?? 0;
+        $this-&gt;pageSize = $content['page_size'] ?? 0;
+        $this-&gt;pageCount = $content['page_count'] ?? 0;
+        $this-&gt;aggregations = $content['aggregations'] ?? null;
+
+        $this-&gt;debug = $content['debug'] ?? [];
+        $this-&gt;took = $content['took'] ?? 0;
+        $this-&gt;timedOut = $content['timed_out'] ?? false;
+        $this-&gt;warning = $content['warnings'] ?? null;
+
+        $this-&gt;listDocuments = array_map(
+            fn (array $item) =&gt; new SearchDocument($item),
+            $content['hits'] ?? []
+        );
+    }
+</code></pre>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
