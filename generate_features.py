@@ -7,7 +7,7 @@ def extract_features_from_php(file_path):
         content = file.read()
         matches = re.findall(r"/\*\*(.*?)\*/\s*(public|private|protected)?\s*function\s+(\w+)\s*\((.*?)\)\s*{", content, re.DOTALL)
         for docblock, visibility, function_name, params in matches:
-            docblock = re.sub(r"\r\n|\r", "\n", docblock.strip())  # Normalize line endings
+            docblock = re.sub(r"\r\n|\r", "\n", docblock.strip()) 
             lines = [line.strip(" *") for line in docblock.split("\n") if line.strip()]
             description_lines = []
             details = []
@@ -15,13 +15,12 @@ def extract_features_from_php(file_path):
             for line in lines:
                 if line.startswith("@"):
                     details.append(line + '\n')
-
                 else:
                     description_lines.append(line)
 
             description = " ".join(description_lines).strip()
 
-            # Extract function code block
+            
             function_code_match = re.search(
                 rf"(public|private|protected)?\s*function\s+{function_name}\s*\([^)]*\)\s*\{{(.*?)\}}",
                 content, re.DOTALL
@@ -38,9 +37,9 @@ def extract_features_from_php(file_path):
 
 def generate_features_md(output_path, root_dir):
     features = []
-    for root, _, files in os.walk(root_dir):
+    for root, _, files in os.walk(root_dir):  
         for file in files:
-            if file.endswith(".php"):
+            if file.endswith(".php"):  
                 file_path = os.path.join(root, file)
                 features.extend(extract_features_from_php(file_path))
     with open(output_path, 'w', encoding='utf-8') as output_file:
@@ -57,4 +56,6 @@ def generate_features_md(output_path, root_dir):
             output_file.write("\n<hr>\n\n")
 
 if __name__ == "__main__":
-    generate_features_md("doc/features.md", "src")
+    
+    root_dir = os.path.dirname(os.path.abspath(__file__)) 
+    generate_features_md(os.path.join(root_dir, "doc/features.md"), root_dir)
