@@ -7,23 +7,32 @@ def extract_features_from_php(file_path):
         content = file.read()
         matches = re.findall(r"/\*\*(.*?)\*/\s*(public|private|protected)?\s*function\s+(\w+)\s*\((.*?)\)\s*{", content, re.DOTALL)
         for docblock, visibility, function_name, params in matches:
-            docblock = re.sub(r"\s*\*\s?", "", docblock.strip())
-            description = ""
-            for line in docblock.split("\n"):
-                if not line.startswith("@"):
-                    description += line.strip() + " "
-            description = description.strip()
-            function_code = re.search(
-                rf"(public|private|protected)?\s*function\s+{function_name}\s*\(.*?\)\s*{{.*?}}",
-                content,
-                re.DOTALL
+            docblock = re.sub(r"\r\n|\r", "\n", docblock.strip())  # Normalize line endings
+            lines = [line.strip(" *") for line in docblock.split("\n") if line.strip()]
+            description_lines = []
+            details = []
+
+            for line in lines:
+                if line.startswith("@"):
+                    details.append(line + '\n')
+
+                else:
+                    description_lines.append(line)
+
+            description = " ".join(description_lines).strip()
+
+            # Extract function code block
+            function_code_match = re.search(
+                rf"(public|private|protected)?\s*function\s+{function_name}\s*\([^)]*\)\s*\{{(.*?)\}}",
+                content, re.DOTALL
             )
-            if function_code:
-                function_code = function_code.group(0).strip()
+            function_code = function_code_match.group(0).strip() if function_code_match else ""
+
             features.append({
                 "name": function_name,
                 "description": description,
-                "details": function_code
+                "details": details,
+                "code": function_code
             })
     return features
 
@@ -40,7 +49,11 @@ def generate_features_md(output_path, root_dir):
             output_file.write(f"## Function Name: {feature['name']}\n\n")
             output_file.write(f"**Description:** {feature['description']}\n\n")
             output_file.write(f"**Function Details:**\n\n")
-            output_file.write(f"```php\n{feature['details']}\n```\n")
+            for detail in feature['details']:
+                output_file.write(f"{detail}\n")
+            output_file.write("\n```php\n")
+            output_file.write(f"{feature['code']}\n")
+            output_file.write("```\n")
             output_file.write("\n<hr>\n\n")
 
 if __name__ == "__main__":

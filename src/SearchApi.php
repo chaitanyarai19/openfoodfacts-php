@@ -219,27 +219,4 @@ class SearchApi
         ];
     }
 
-    /**
-     * Multiply two numbers
-     *
-     * @param int|float $a first number
-     * @param int|float $b second number
-     * @return int|float the result of the multiplication
-     */
-    function multiply($a, $b) {
-        return $a * $b;
-    }
-
-    /**
-     * Add two numbers
-     *
-     *
-     * @param int|float $a first number
-     * @param int|float $b second number
-     * @return int|float the result of the addition
-     */
-    function add($a, $b) {
-        return $a + $b;
-    }
-
 }
