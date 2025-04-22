@@ -233,6 +233,7 @@ class SearchApi
     /**
      * Add two numbers
      *
+     *
      * @param int|float $a first number
      * @param int|float $b second number
      * @return int|float the result of the addition
