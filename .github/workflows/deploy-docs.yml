@@ -3,7 +3,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - cr03
+      - cr03  # Trigger workflow on pushes to the cr03 branch
 
 jobs:
   build-deploy:
@@ -27,8 +27,7 @@ jobs:
         run: mkdocs build --config-file mkdocs.yml
 
       - name: Deploy to GitHub Pages
-        run: |
-          mkdir -p public
-          cp -r site/* public/
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
