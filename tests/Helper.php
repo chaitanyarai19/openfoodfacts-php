@@ -12,3 +12,15 @@ class Helper
         return $GLOBALS['cache-'.$api->getCurrentApi()][$barCode] ?? $GLOBALS['cache-'.$api->getCurrentApi()][$barCode] = $api->getProduct($barCode);
     }
 }
+
+//Function for addition for 2 numbers
+/**
+* This function takes two numbers as input and returns their sum.
+ * @param int $a first number
+ * @param int $b second number
+ * @return int sum of the two numbers
+ */
+
+function add($a, $b) {
+    return $a + $b;
+}
