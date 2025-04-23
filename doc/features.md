@@ -622,9 +622,9 @@ public function __construct(array $content)
 
 <hr>
 
-## Function Name: multiply
+## Function Name: subtract
 
-**Description:** Multiply two numbers and return the result.
+**Description:** Subtract two numbers and return the result.
 
 **Function Details:**
 
@@ -632,12 +632,12 @@ public function __construct(array $content)
 
 @param int $b Second number
 
-@return int Product of the two numbers
+@return int subtraction of the two numbers
 
 
 ```php
-function multiply($a, $b) {
-    return $a * $b;
+function subtract($a, $b) {
+    return $a - $b;
 }
 ```
 

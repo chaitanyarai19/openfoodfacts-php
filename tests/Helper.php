@@ -13,15 +13,15 @@ class Helper
     }
 }
 
-//Function for multiply 2 numbers
+//Function for subtract 2 numbers
 /**
- * Multiply two numbers and return the result.
+ * Subtract two numbers and return the result.
  * 
  * @param int $a First number
  * @param int $b Second number
- * @return int Product of the two numbers
+ * @return int subtraction of the two numbers
  *
  */
-function multiply($a, $b) {
-    return $a * $b;
+function subtract($a, $b) {
+    return $a - $b;
 }
