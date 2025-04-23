@@ -622,22 +622,22 @@ public function __construct(array $content)
 
 <hr>
 
-## Function Name: add
+## Function Name: multiply
 
-**Description:** This function takes two numbers as input and returns their sum.
+**Description:** Multiply two numbers and return the result.
 
 **Function Details:**
 
-@param int $a first number
+@param int $a First number
 
-@param int $b second number
+@param int $b Second number
 
-@return int sum of the two numbers
+@return int Product of the two numbers
 
 
 ```php
-function add($a, $b) {
-    return $a + $b;
+function multiply($a, $b) {
+    return $a * $b;
 }
 ```
 

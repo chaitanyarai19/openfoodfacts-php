@@ -13,14 +13,15 @@ class Helper
     }
 }
 
-//Function for addition for 2 numbers
+//Function for multiply 2 numbers
 /**
-* This function takes two numbers as input and returns their sum.
- * @param int $a first number
- * @param int $b second number
- * @return int sum of the two numbers
+ * Multiply two numbers and return the result.
+ * 
+ * @param int $a First number
+ * @param int $b Second number
+ * @return int Product of the two numbers
+ *
  */
-
-function add($a, $b) {
-    return $a + $b;
+function multiply($a, $b) {
+    return $a * $b;
 }
