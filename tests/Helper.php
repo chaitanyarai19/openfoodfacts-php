@@ -15,13 +15,13 @@ class Helper
 
 //Function for subtract 2 numbers
 /**
- * Subtract two numbers and return the result.
+ * Divide two numbers and return the result.
  * 
  * @param int $a First number
  * @param int $b Second number
- * @return int subtraction of the two numbers
+ * @return int Division of the two numbers
  *
  */
-function subtract($a, $b) {
-    return $a - $b;
+function divide($a, $b) {
+    return $a / $b;
 }

@@ -622,9 +622,9 @@ public function __construct(array $content)
 
 <hr>
 
-## Function Name: subtract
+## Function Name: divide
 
-**Description:** Subtract two numbers and return the result.
+**Description:** Divide two numbers and return the result.
 
 **Function Details:**
 
@@ -632,12 +632,12 @@ public function __construct(array $content)
 
 @param int $b Second number
 
-@return int subtraction of the two numbers
+@return int Division of the two numbers
 
 
 ```php
-function subtract($a, $b) {
-    return $a - $b;
+function divide($a, $b) {
+    return $a / $b;
 }
 ```
 
