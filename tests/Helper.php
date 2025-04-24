@@ -13,15 +13,15 @@ class Helper
     }
 }
 
-//Function for subtract 2 numbers
+//Function for add 2 numbers
 /**
- * Divide two numbers and return the result.
+ * add two numbers and return the result.
  * 
  * @param int $a First number
  * @param int $b Second number
- * @return int Division of the two numbers
+ * @return int Sum of the two numbers
  *
  */
 function divide($a, $b) {
-    return $a / $b;
+    return $a + $b;
 }

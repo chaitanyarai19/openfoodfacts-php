@@ -624,7 +624,7 @@ public function __construct(array $content)
 
 ## Function Name: divide
 
-**Description:** Divide two numbers and return the result.
+**Description:** add two numbers and return the result.
 
 **Function Details:**
 
@@ -632,12 +632,12 @@ public function __construct(array $content)
 
 @param int $b Second number
 
-@return int Division of the two numbers
+@return int Sum of the two numbers
 
 
 ```php
 function divide($a, $b) {
-    return $a / $b;
+    return $a + $b;
 }
 ```
 
