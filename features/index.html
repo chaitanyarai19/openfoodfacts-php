@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../guidelines/">
       
       
       
@@ -211,6 +211,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -262,15 +284,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-name-add" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Name: add
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#function-name-__construct" class="md-nav__link">
@@ -514,15 +527,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-name-add" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Name: add
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#function-name-__construct" class="md-nav__link">
     <span class="md-ellipsis">
       Function Name: __construct
@@ -746,18 +750,6 @@
 
 
 <h1 id="features">Features</h1>
-<h2 id="function-name-add">Function Name: add</h2>
-<p><strong>Description:</strong> add two numbers and return the result.</p>
-<p><strong>Function Details:</strong></p>
-<p>@param int $a First number</p>
-<p>@param int $b Second number</p>
-<p>@return int Sum of the two numbers</p>
-<pre><code class="language-php">function add($a, $b) {
-    return $a + $b;
-}
-</code></pre>
-<hr>
-
 <h2 id="function-name-__construct">Function Name: __construct</h2>
 <p><strong>Description:</strong> namespace OpenFoodFacts; use GuzzleHttp\Client; use GuzzleHttp\ClientInterface; use GuzzleHttp\Exception\GuzzleException; use GuzzleHttp\TransferStats; use OpenFoodFacts\Exception\BadRequestException; use OpenFoodFacts\Exception\ProductNotFoundException; use Psr\Log\LoggerInterface; use Psr\Log\NullLogger; use Psr\SimpleCache\CacheInterface; use Psr\SimpleCache\InvalidArgumentException; / this class provide [...]  It a fork of the python OpenFoodFact rewrite on PHP 7.2 / class Api { / the httpClient for all http request / private ClientInterface $httpClient; / this property store the current base of the url / private string $geoUrl     = 'https://%s.openfoodfacts.org'; / This property store the current location for http call  This property could be world for all product or you can specify le country code (cc) and language of the interface (lc). If you want filter on french product you can set fr as country code. We strongly recommend to use english as language of the interface  / public string $geography  = 'world'; / this property store the auth parameter (username and password) / private ?array $auth       = null; / this property help you to log information / private LoggerInterface $logger; private ?CacheInterface $cache; / this constant defines the environments usable by the API / private const LIST_API = [ 'food'    =&gt; 'https://%s.openfoodfacts.org', 'beauty'  =&gt; 'https://%s.openbeautyfacts.org', 'pet'     =&gt; 'https://%s.openpetfoodfacts.org', 'product' =&gt; 'https://%s.openproductsfacts.org', ]; / This constant defines the facets usable by the API  This variable is used to create the magic functions like "getIngredients" or "getBrands" / private const FACETS = [ 'additives', 'allergens', 'brands', 'categories', 'countries', 'contributors', 'code', 'entry_dates', 'ingredients', 'label', 'languages', 'nutrition_grade', 'packaging', 'packaging_codes', 'purchase_places', 'photographer', 'informer', 'states', 'stores', 'traces', ]; / This constant defines the extensions authorized for the downloading of the data / private const FILE_TYPE_MAP = [ 'mongodb'   =&gt; 'openfoodfacts-mongodbdump.tar.gz', 'csv'       =&gt; 'en.openfoodfacts.org.products.csv', 'rdf'       =&gt; 'en.openfoodfacts.org.products.rdf' ]; / the constructor of the function</p>
 <p><strong>Function Details:</strong></p>
