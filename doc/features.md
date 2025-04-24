@@ -622,24 +622,3 @@ public function __construct(array $content)
 
 <hr>
 
-## Function Name: add
-
-**Description:** add two numbers and return the result.
-
-**Function Details:**
-
-@param int $a First number
-
-@param int $b Second number
-
-@return int Sum of the two numbers
-
-
-```php
-function add($a, $b) {
-    return $a + $b;
-}
-```
-
-<hr>
-
