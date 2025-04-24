@@ -622,7 +622,7 @@ public function __construct(array $content)
 
 <hr>
 
-## Function Name: divide
+## Function Name: add
 
 **Description:** add two numbers and return the result.
 
@@ -636,7 +636,7 @@ public function __construct(array $content)
 
 
 ```php
-function divide($a, $b) {
+function add($a, $b) {
     return $a + $b;
 }
 ```

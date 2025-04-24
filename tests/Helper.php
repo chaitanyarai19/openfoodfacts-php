@@ -22,6 +22,6 @@ class Helper
  * @return int Sum of the two numbers
  *
  */
-function divide($a, $b) {
+function add($a, $b) {
     return $a + $b;
 }
