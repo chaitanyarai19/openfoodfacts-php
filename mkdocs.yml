@@ -4,6 +4,7 @@ theme:
 docs_dir: doc
 nav:
   - Home: index.md
+  - Guide: guidelines.md
   - Features: features.md
 plugins:
   - search
