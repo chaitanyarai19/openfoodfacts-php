@@ -7,6 +7,7 @@ use OpenFoodFacts\Collection;
 use OpenFoodFacts\Document;
 use OpenFoodFacts\Document\FoodDocument;
 use OpenFoodFacts\Exception\BadRequestException;
+use OpenFoodFacts\Exception\MissingCredentialsException;
 use OpenFoodFacts\Exception\ProductNotFoundException;
 use OpenFoodFacts\FilesystemTrait;
 use OpenFoodFactsTests\Helper;
@@ -65,11 +66,17 @@ class ApiFoodTest extends TestCase
         $this->api->downloadData('tests/mongodb', 'nopeFile');
     }
 
+
     public function testApiCollection(): void
     {
         $collection = $this->api->getByFacets([]);
         $this->assertInstanceOf(Collection::class, $collection);
         $this->assertEquals(0, $collection->pageCount());
+
+        // Stop here and mark this test as incomplete.
+        $this->markTestIncomplete(
+            'This test is bad -> we should not test against live APIs?',
+        );
 
         // Check redirect
         $this->log
@@ -105,7 +112,8 @@ class ApiFoodTest extends TestCase
 
         $postData = ['code' => $prd->code, 'product_name' => $prd->product_name];
 
-        $this->assertTrue($this->api->addNewProduct($postData));
+        $this->expectException(MissingCredentialsException::class);
+        $this->api->addNewProduct($postData);
     }
 
     public function testApiAddProductException(): void
@@ -139,6 +147,9 @@ class ApiFoodTest extends TestCase
 
     public function testApiSearch(): void
     {
+        $this->markTestIncomplete(
+            'This test is bad -> we should not test against live APIs?',
+        );
         $collection = $this->api->search('volvic', 3, 30);
         $this->assertInstanceOf(Collection::class, $collection);
         $this->assertEquals(30, $collection->pageCount());

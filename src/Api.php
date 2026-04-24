@@ -9,6 +9,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\TransferStats;
 use OpenFoodFacts\Exception\BadRequestException;
+use OpenFoodFacts\Exception\MissingCredentialsException;
 use OpenFoodFacts\Exception\ProductNotFoundException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -276,6 +277,10 @@ class Api
             return true;
         }
 
+        if ($result['status_verbose'] === 'no user credentials') {
+            throw new MissingCredentialsException('no user credentials');
+        }
+
         return $result['status_verbose'];
     }
 
@@ -496,7 +501,7 @@ class Api
      * @param  int|string|array|null $parameters
      * @return string               the generated url
      */
-    private function buildUrl(string $service = null, $resourceType = null, $parameters = null): string
+    private function buildUrl(?string $service = null, $resourceType = null, $parameters = null): string
     {
         $baseUrl = null;
         switch ($service) {
