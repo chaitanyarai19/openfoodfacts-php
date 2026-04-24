@@ -31,12 +31,12 @@ class SearchApi
      * @param CacheInterface|null $cacheInterface
      */
     public function __construct(
-        public readonly string $userAgent,
+        public readonly string          $userAgent,
         public readonly LoggerInterface $logger = new NullLogger(),
         public readonly ClientInterface $httpClient = new Client(),
-        ?CacheInterface $cacheInterface = null
+        ?CacheInterface                 $cacheInterface = null
     ) {
-        $this->cache        = $cacheInterface;
+        $this->cache = $cacheInterface;
 
     }
 
@@ -52,13 +52,13 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function getDocument(string $identifier, string $indexId = null): SearchDocument
+    public function getDocument(string $identifier, ?string $indexId = null): SearchDocument
     {
         $params = isset($indexId) ? ['index_id' => $indexId] : [];
 
         $url = "https://search.openfoodfacts.org/document/$identifier?" . http_build_query($params);
 
-        $cacheKey   = hash('sha256', $url);
+        $cacheKey = hash('sha256', $url);
         if (!empty($this->cache) && $this->cache->has($cacheKey)) {
             return $this->cache->get($cacheKey);
         }
@@ -100,32 +100,32 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function search(string $query = null, array $langs = null, int $pageSize = null, int $page = null, array $fields = null, string $sortBy = null, string $indexId = null): SearchResult
+    public function search(?string $query = null, ?array $langs = null, ?int $pageSize = null, ?int $page = null, ?array $fields = null, ?string $sortBy = null, ?string $indexId = null): SearchResult
     {
-        if(empty($query) && empty($sortBy)) {
+        if (empty($query) && empty($sortBy)) {
             throw new InvalidParameterException('query or sortBy must be provided');
         }
         /** @var string[] $parameters */
         $parameters = [];
-        if(isset($query)) {
+        if (isset($query)) {
             $parameters['q'] = $query;
         }
-        if(isset($langs)) {
+        if (isset($langs)) {
             $parameters['langs'] = implode(',', $langs);
         }
-        if(isset($pageSize)) {
+        if (isset($pageSize)) {
             $parameters['page_size'] = $pageSize;
         }
-        if(isset($page)) {
+        if (isset($page)) {
             $parameters['page'] = $page;
         }
-        if(isset($fields)) {
+        if (isset($fields)) {
             $parameters['fields'] = implode(',', $fields);
         }
-        if(isset($sortBy)) {
+        if (isset($sortBy)) {
             $parameters['sort_by'] = $sortBy;
         }
-        if(isset($indexId)) {
+        if (isset($indexId)) {
             $parameters['index_id'] = $indexId;
         }
 
@@ -151,9 +151,9 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function autocomplete(string $query, array $taxonomyNames, string $lang = null, int $size = null, int $fuzziness = null, string $indexId = null): AutocompleteResult
+    public function autocomplete(string $query, array $taxonomyNames, ?string $lang = null, ?int $size = null, ?int $fuzziness = null, ?string $indexId = null): AutocompleteResult
     {
-        if(empty($query) || empty($taxonomyNames)) {
+        if (empty($query) || empty($taxonomyNames)) {
             throw new InvalidParameterException('query ans taxonomyNames must be provided');
         }
         /** @var string[] $parameters */
@@ -161,16 +161,16 @@ class SearchApi
             'q' => $query,
             'taxonomy_names' => implode(',', $taxonomyNames),
         ];
-        if(isset($lang)) {
+        if (isset($lang)) {
             $parameters['lang'] = $lang;
         }
-        if(isset($size)) {
+        if (isset($size)) {
             $parameters['size'] = $size;
         }
-        if(isset($fuzziness)) {
+        if (isset($fuzziness)) {
             $parameters['fuzziness'] = $fuzziness;
         }
-        if(isset($indexId)) {
+        if (isset($indexId)) {
             $parameters['index_id'] = $indexId;
         }
 
@@ -186,9 +186,12 @@ class SearchApi
      * @throws UnknownException
      * @throws GuzzleException
      */
-    private function request(string $method, string $url): array
+    private function request(string $method, string $url, array $config = []): array
     {
-        $response = $this->httpClient->request($method, $url, $this->getDefaultOptions());
+        if ($config === []) {
+            $config = $this->getDefaultOptions();
+        }
+        $response = $this->httpClient->request($method, $url, $config);
         $content = json_decode($response->getBody()->getContents(), true);
 
         switch ($response->getStatusCode()) {
@@ -201,7 +204,7 @@ class SearchApi
 
                 throw new ValidationException();
             default:
-                $this->logger->error('We encounter an unknown http error', ['url' => $url,'http_content' => $content]);
+                $this->logger->error('We encounter an unknown http error', ['url' => $url, 'http_content' => $content]);
 
                 throw new UnknownException(sprintf('Search return an http error : %s', $response->getStatusCode()));
         }
@@ -215,7 +218,8 @@ class SearchApi
         return [
             'headers' => [
                 'User-Agent' => 'SDK PHP - ' . $this->userAgent,
-            ]
+            ],
+            'allow_redirects' => true,
         ];
     }
 }
