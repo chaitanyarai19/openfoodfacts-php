@@ -221,7 +221,7 @@ class SearchApiTest extends TestCase
             ->method('request')
             ->with('get', $url, [
                 'headers' => [
-                    'User-Agent' => 'SDK PHP - ' . $this->userAgent,
+                    'User-Agent' => 'SDK PHP - ' . self::USER_AGENT,
                 ],
                 'allow_redirects' => true,
             ])
