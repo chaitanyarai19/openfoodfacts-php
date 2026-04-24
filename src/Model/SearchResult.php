@@ -34,7 +34,7 @@ class SearchResult
         $this->page = $content['page'] ?? 0;
         $this->pageSize = $content['page_size'] ?? 0;
         $this->pageCount = $content['page_count'] ?? 0;
-        $this->aggregations = $content['aggregations'] ?? null;
+        $this->aggregations = $content['aggregations'] ?? [];
 
         $this->debug = $content['debug'] ?? [];
         $this->took = $content['took'] ?? 0;
