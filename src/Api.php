@@ -501,7 +501,7 @@ class Api
      * @param  int|string|array|null $parameters
      * @return string               the generated url
      */
-    private function buildUrl(string $service = null, $resourceType = null, $parameters = null): string
+    private function buildUrl(?string $service = null, $resourceType = null, $parameters = null): string
     {
         $baseUrl = null;
         switch ($service) {

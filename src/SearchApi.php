@@ -52,7 +52,7 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function getDocument(string $identifier, string $indexId = null): SearchDocument
+    public function getDocument(string $identifier, ?string $indexId = null): SearchDocument
     {
         $params = isset($indexId) ? ['index_id' => $indexId] : [];
 
@@ -100,7 +100,7 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function search(string $query = null, array $langs = null, int $pageSize = null, int $page = null, array $fields = null, string $sortBy = null, string $indexId = null): SearchResult
+    public function search(?string $query = null, ?array $langs = null, ?int $pageSize = null, ?int $page = null, ?array $fields = null, ?string $sortBy = null, ?string $indexId = null): SearchResult
     {
         if (empty($query) && empty($sortBy)) {
             throw new InvalidParameterException('query or sortBy must be provided');
@@ -151,7 +151,7 @@ class SearchApi
      * @throws ValidationException
      * @throws GuzzleException
      */
-    public function autocomplete(string $query, array $taxonomyNames, string $lang = null, int $size = null, int $fuzziness = null, string $indexId = null): AutocompleteResult
+    public function autocomplete(string $query, array $taxonomyNames, ?string $lang = null, ?int $size = null, ?int $fuzziness = null, ?string $indexId = null): AutocompleteResult
     {
         if (empty($query) || empty($taxonomyNames)) {
             throw new InvalidParameterException('query ans taxonomyNames must be provided');
