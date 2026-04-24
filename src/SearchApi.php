@@ -35,8 +35,7 @@ class SearchApi
         public readonly LoggerInterface $logger = new NullLogger(),
         public readonly ClientInterface $httpClient = new Client(),
         ?CacheInterface                 $cacheInterface = null
-    )
-    {
+    ) {
         $this->cache = $cacheInterface;
 
     }
@@ -189,7 +188,9 @@ class SearchApi
      */
     private function request(string $method, string $url, array $config = []): array
     {
-        if ($config === []) $config = $this->getDefaultOptions();
+        if ($config === []) {
+            $config = $this->getDefaultOptions();
+        }
         $response = $this->httpClient->request($method, $url, $config);
         $content = json_decode($response->getBody()->getContents(), true);
 
