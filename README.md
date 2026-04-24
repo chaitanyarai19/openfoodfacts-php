@@ -12,6 +12,11 @@ PHP API Wrapper for [Open Food Facts](https://openfoodfacts.org/), the open data
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/openfoodfacts/openfoodfacts-php.svg)](https://isitmaintained.com/project/openfoodfacts/openfoodfacts-php "Average time to resolve an issue")
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/openfoodfacts/openfoodfacts-php.svg)](https://isitmaintained.com/project/openfoodfacts/openfoodfacts-php "Percentage of issues still open")
 
+## Current features
+* Search-A-Licious (#62), user-agent (#53), PHP 8.1 (#47), Image upload
+* Most features should be visible here: https://github.com/openfoodfacts/openfoodfacts-php/blob/develop/src/Api.php
+* PLEASE DOCUMENT ANY MISSING FEATURES HERE
+
 ## Installation
 
 With Composer:
@@ -81,7 +86,11 @@ see: [PSR-16 Simple Cache](https://www.php-fig.org/psr/psr-16/)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
 
-## Third party applications
-If you use this SDK, feel free to open a PR to add your application in this list.
+## Using this SDK and Third party applications
+
+- If you use this SDK, feel free to open a PR to add your application in the list in [REUSERS.md](https://github.com/openfoodfacts/openfoodfacts-php/blob/develop/REUSERS.md)
+- Make sure you comply with the OdBL licence, mentioning the Source of your data, and ensuring to avoid combining non free data you can't release legally as open data. Another requirement is contributing back any product you add using this SDK.
+- Please get in touch at reuse@openfoodfacts.org
+- We are very interested in learning what the Open Food Facts data is used for. It is not mandatory, but we would very much appreciate it if you tell us about your re-uses (https://forms.gle/hwaeqBfs8ywwhbTg8) so that we can share them with the Open Food Facts community. You can also fill this form to get a chance to get your app featured: https://forms.gle/hwaeqBfs8ywwhbTg8
 
 ## Authors
