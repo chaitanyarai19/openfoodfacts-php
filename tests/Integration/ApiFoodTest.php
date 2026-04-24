@@ -65,11 +65,17 @@ class ApiFoodTest extends TestCase
         $this->api->downloadData('tests/mongodb', 'nopeFile');
     }
 
+
     public function testApiCollection(): void
     {
         $collection = $this->api->getByFacets([]);
         $this->assertInstanceOf(Collection::class, $collection);
         $this->assertEquals(0, $collection->pageCount());
+
+        // Stop here and mark this test as incomplete.
+        $this->markTestIncomplete(
+            'This test is bad -> we should not test against live APIs?',
+        );
 
         // Check redirect
         $this->log
