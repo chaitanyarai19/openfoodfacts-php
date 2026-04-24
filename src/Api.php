@@ -277,7 +277,7 @@ class Api
             return true;
         }
 
-        if($result['status_verbose'] === 'no user credentials'){
+        if ($result['status_verbose'] === 'no user credentials') {
             throw new MissingCredentialsException('no user credentials');
         }
 
