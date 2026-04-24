@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/chaitanyarai19/openfoodfacts-php/compare/v0.4.0...v0.4.1) (2026-04-24)
+
+
+### Bug Fixes
+
+* ext-gd as dev. dependency ([db75b14](https://github.com/chaitanyarai19/openfoodfacts-php/commit/db75b14e79bc61674d8162e386cde3e3cbe9072b))
+* **workflow:** replace deprecated set-output command ([9e0361e](https://github.com/chaitanyarai19/openfoodfacts-php/commit/9e0361ea09176e5834016a8650828a41a4e82548))
+
 ## [0.4.0](https://github.com/chaitanyarai19/openfoodfacts-php/compare/v0.3.0...v0.4.0) (2025-04-22)
 
 
