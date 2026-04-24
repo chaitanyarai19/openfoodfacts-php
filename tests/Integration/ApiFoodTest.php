@@ -7,6 +7,7 @@ use OpenFoodFacts\Collection;
 use OpenFoodFacts\Document;
 use OpenFoodFacts\Document\FoodDocument;
 use OpenFoodFacts\Exception\BadRequestException;
+use OpenFoodFacts\Exception\MissingCredentialsException;
 use OpenFoodFacts\Exception\ProductNotFoundException;
 use OpenFoodFacts\FilesystemTrait;
 use OpenFoodFactsTests\Helper;
@@ -111,7 +112,8 @@ class ApiFoodTest extends TestCase
 
         $postData = ['code' => $prd->code, 'product_name' => $prd->product_name];
 
-        $this->assertTrue($this->api->addNewProduct($postData));
+        $this->expectException(MissingCredentialsException::class);
+        $this->api->addNewProduct($postData);
     }
 
     public function testApiAddProductException(): void

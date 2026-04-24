@@ -9,6 +9,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\TransferStats;
 use OpenFoodFacts\Exception\BadRequestException;
+use OpenFoodFacts\Exception\MissingCredentialsException;
 use OpenFoodFacts\Exception\ProductNotFoundException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -274,6 +275,10 @@ class Api
 
         if ($result['status_verbose'] === 'fields saved' && $result['status'] === 1) {
             return true;
+        }
+
+        if($result['status_verbose'] === 'no user credentials'){
+            throw new MissingCredentialsException('no user credentials');
         }
 
         return $result['status_verbose'];
